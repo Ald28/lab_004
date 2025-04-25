@@ -1,0 +1,38 @@
+﻿<Window x:Class="LAB04.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAB04"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <StackPanel Orientation="Vertical" Margin="5">
+            <Button Content="Listar Productos" Click="Button_Productos" Height="30" Margin="0,0,0,5"/>
+            <DataGrid x:Name="dgProductos" Height="120" AutoGenerateColumns="True" IsReadOnly="True" Margin="0,0,0,10"/>
+
+            <Button Content="Listar Categorías" Click="Button_Categorias" Height="30" Margin="0,0,0,5"/>
+            <DataGrid x:Name="dgCategorias" Height="120" AutoGenerateColumns="True" IsReadOnly="True" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Nombre del contacto:"/>
+            <TextBox x:Name="txtNombreContacto" Margin="0,0,0,5"/>
+
+            <TextBlock Text="Ciudad:"/>
+            <TextBox x:Name="txtCiudad" Margin="0,0,0,5"/>
+
+            <Button Content="Buscar Proveedor" Click="Button_Buscar_Proveedor" Height="30" Margin="0,0,0,5"/>
+            <DataGrid x:Name="dgProveedores" Height="120" AutoGenerateColumns="True" IsReadOnly="True"/>
+
+            <TextBlock Text="Fecha inicio del pedido:"/>
+            <DatePicker x:Name="dpFechaInicio" Margin="0,0,0,5"/>
+
+            <TextBlock Text="Fecha fin del pedido:"/>
+            <DatePicker x:Name="dpFechaFin" Margin="0,0,0,5"/>
+
+            <Button Content="Buscar Pedidos por Fecha" Click="Button_Buscar_Pedidos_Fecha" Height="30" Margin="0,0,0,5"/>
+            <DataGrid x:Name="dgPedidos" Height="120" AutoGenerateColumns="True" IsReadOnly="True"/>
+
+
+        </StackPanel>
+    </Grid>
+</Window>
